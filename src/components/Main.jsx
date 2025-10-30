@@ -1,6 +1,6 @@
 import React from "react";
-import ClaudeRecipe from "../components/claudeRecipe.jsx";
-import IngredientsList from "../components/IngredientsList.jsx";
+import ClaudeRecipe from "./claudeRecipe.jsx";
+import IngredientsList from "./IngredientsList.jsx";
 import { getRecipeFromGPT } from "../ai.js";
 import "./Main.css";
 
