@@ -1,16 +1,104 @@
-# React + Vite
+# Chef Claude - AI Recipe Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chef Claude is a React-based web application that helps you generate recipes based on the ingredients you have on hand. Using the power of Hugging Face's AI models, it suggests creative and practical recipes that make the most of your available ingredients.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Add ingredients to your list with a simple interface
+- 🔍 Generate recipes based on your available ingredients
+- 🎨 Beautiful and responsive design
+- 📱 Mobile-friendly interface
+- ⚡ Fast recipe generation using Hugging Face AI
+- 📋 Markdown-formatted recipe output
 
-## React Compiler
+## 🚀 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React v19
+- Vite v7
+- Hugging Face Inference API
+- React Markdown
+- Axios
+- ESLint for code quality
 
-## Expanding the ESLint configuration
+## 📋 Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Before you begin, ensure you have:
+
+- Node.js (Latest LTS version recommended)
+- A Hugging Face API token
+
+## ⚙️ Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ankurjainn/Chef-Ankur.git
+   cd Chef-Claude
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your Hugging Face API token:
+   ```env
+   HUGGING_FACE_TOKEN=your_token_here
+   ```
+
+## 🏃‍♂️ Running the Application
+
+To run the development server:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## 🎯 How to Use
+
+1. Enter ingredients you have available in your kitchen
+2. Click "Add Ingredients" to add them to your list
+3. Once you've added at least 4 ingredients, you'll see the "Get a Recipe" button
+4. Click "Get a Recipe" to generate a recipe using your ingredients
+5. The AI will suggest a recipe that uses some or all of your listed ingredients
+
+## 🔑 Environment Variables
+
+The following environment variables are required:
+
+- `HUGGING_FACE_TOKEN`: Your Hugging Face API token
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Built with React and Vite
+- Powered by Hugging Face's AI models
+- Inspired by the need to reduce food waste and make cooking more accessible
+
+---
+
+Made with ❤️ by [Ankur Jain](https://github.com/ankurjainn)
