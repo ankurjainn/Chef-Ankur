@@ -22,6 +22,11 @@ export default function Main() {
     try {
       const RecipeMarkdown = await getRecipeFromGPT(ingredients);
       setRecipe(RecipeMarkdown);
+    } catch (error) {
+      console.error("Error getting recipe:", error);
+      setRecipe(
+        "Sorry, I couldn't generate a recipe at the moment. Please try again."
+      );
     } finally {
       setIsLoading(false);
     }
