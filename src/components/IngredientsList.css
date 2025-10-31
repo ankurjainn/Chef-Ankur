@@ -1,34 +1,40 @@
 .ingredients-list {
-    list-style: none;
-    padding-left: 1.2em;
-    counter-reset: emoji;
+    list-style: disc; /* use standard bullet points */
+    list-style-position: outside;
+    margin: 0; /* remove default top/bottom margins */
+    padding-left: 1.2rem; /* room for bullets */
 }
 
 .ingredients-list li {
-    position: relative;
-    padding: 0.3em 0;
-    counter-increment: emoji;
+    padding: 0.25em 0; /* slightly tighter spacing */
+    text-align: left;
 }
 
-/* Define our list of emojis as CSS custom properties */
-.ingredients-list li:nth-child(15n + 1)::before { content: "😋"; }
-.ingredients-list li:nth-child(15n + 2)::before { content: "😊"; }
-.ingredients-list li:nth-child(15n + 3)::before { content: "🥳"; }
-.ingredients-list li:nth-child(15n + 4)::before { content: "🤩"; }
-.ingredients-list li:nth-child(15n + 5)::before { content: "😎"; }
-.ingredients-list li:nth-child(15n + 6)::before { content: "🥰"; }
-.ingredients-list li:nth-child(15n + 7)::before { content: "👨‍🍳"; }
-.ingredients-list li:nth-child(15n + 8)::before { content: "👩‍🍳"; }
-.ingredients-list li:nth-child(15n + 9)::before { content: "✨"; }
-.ingredients-list li:nth-child(15n + 10)::before { content: "🌟"; }
-.ingredients-list li:nth-child(15n + 11)::before { content: "�"; }
-.ingredients-list li:nth-child(15n + 12)::before { content: "🎉"; }
-.ingredients-list li:nth-child(15n + 13)::before { content: "🥘"; }
-.ingredients-list li:nth-child(15n + 14)::before { content: "🍳"; }
-.ingredients-list li:nth-child(15n + 15)::before { content: "🧑‍🍳"; }
+/* Chat-style box that contains the ingredients list */
+.ingredients-box {
+    max-width: 640px;
+    width: 100%;
+    margin: 1rem auto 1rem;
+    padding: 0.85rem 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(16,24,40,0.06);
+    box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+    border-radius: 12px;
+    text-align: left;
+    transition: box-shadow 150ms ease, transform 150ms ease;
+    /* let the box grow naturally, but constrain with a sensible cap */
+    max-height: 48vh;
+    overflow: auto;
+}
 
-.ingredients-list li::before {
-    position: absolute;
-    left: -1.2em;
-    font-size: 1em;
+.ingredients-box h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #111827;
+}
+
+/* small responsive tweak: reduce padding on small screens */
+@media (max-width: 420px) {
+    .ingredients-box { padding: 0.6rem; }
+    .ingredients-list { padding-left: 0.9rem; }
 }

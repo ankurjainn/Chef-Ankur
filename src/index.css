@@ -65,12 +65,12 @@ ul.ingredients-list {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 48px;
+  /* align-items: center; */
+  /* margin-bottom: 48px; */
 }
 
 ul.ingredients-list>li {
-  color: #475467;
+  color: #47484b;
   line-height: 28px;
 }
 
